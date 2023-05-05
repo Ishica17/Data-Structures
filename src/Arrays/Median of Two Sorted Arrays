@@ -1,0 +1,22 @@
+class Solution {
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        double median;
+        int m=nums1.length;
+        int n= nums2.length;
+        int nw=m+n;
+        int arr[]= new int[nw];
+        System.arraycopy(nums1, 0, arr, 0, m);
+        System.arraycopy(nums2, 0, arr, m, n);
+        Arrays.sort(arr);
+        if(nw%2==0)
+        {
+            median= (arr[(nw/2)-1]+arr[nw/2]);
+            median=median/2;
+        }
+        else
+        {
+            median = arr[(nw-1)/2];
+        }
+        return median;  
+    }
+}
