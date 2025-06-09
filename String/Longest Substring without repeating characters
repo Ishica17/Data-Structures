@@ -1,0 +1,21 @@
+# This problem calculates the length of the longest substring without duplicate characters
+# Approach Used: Two pointer + Sliding Window
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+         int i=0,j=1,len =0;
+         if(s.length() == 1){
+            return 1;
+         }
+       while(j<s.length()){ //len = 4
+               for(int k = i; k<j;k++){
+                   if(s.charAt(j)==s.charAt(k)){
+                       i = k+1;
+                       break;
+                   }
+               }
+             len = Math.max(len,j-i+1);
+              j++; 
+           }
+    return len;
+    }
+}
