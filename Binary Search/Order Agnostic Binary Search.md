@@ -1,6 +1,7 @@
 ## Order agnostic binary search is applied when array is in descending order.
 
 ## CODE
+```java
 public class OrderAgnosticBinarySearch{
     public static void main(String [] args){
         int arr[] = {10,9,8,7,6,5,4,3,2,1};
